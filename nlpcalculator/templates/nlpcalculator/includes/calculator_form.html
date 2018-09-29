@@ -1,0 +1,24 @@
+{% block content %}
+	<form method = "POST" id="calculator_form">
+	{% csrf_token %}
+		<div class="container">
+			<center>
+				<h2>NLP Calculator</h2>
+				<h5>Developer- Debargha Bhattacharjee</h5>
+				<p>This is a calculator that solves simple arithmetic word problems.</p>
+			</center>
+		</div>
+
+		<div class="container" >
+		    {{ form }}
+			<!--<label for="inputquery"><b>Enter Query</b></label>
+			<input type="text" placeholder="Enter Query" name="query" required>-->
+			
+			<button type="submit">OK</button>
+			
+			<label for="result">Result:</label>
+			<textarea id="result" name="result" placeholder="Result displayed here..."
+			style="height:200px">{{result}}</textarea>
+		</div>
+	</form>
+{% endblock %}
